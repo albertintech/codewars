@@ -34,7 +34,7 @@ array1 = [true,  true,  true,  false,
           false, false, true,  true ]
 
 
-def countSheeps array
+def count_sheep array
   count = 0
     array.select do |sheep|
       if sheep == true
@@ -48,4 +48,4 @@ end
 #     array.count {|sheep| sheep == true}
 # end
 
-p countSheeps(array1)
+p count_sheep(array1)
