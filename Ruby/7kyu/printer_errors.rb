@@ -26,6 +26,26 @@ Output: Error rate as a fraction in string form
 
 =end
 
+# def printer_error(s)
+#   errors = 0
+# 	arr = s.chars
+#   arr.each {|e| e.eql?('n'..'z')}
+#   errors
+# end
+
 def printer_error(s)
-	# your code
+  errors = 0
+	arr = s.chars
+  arr.each do |e|
+    if e.match?(/[n-z]/) # had to look up how to do regex
+      errors += 1
+    end
+  end
+  "#{errors}/#{arr.length}"
 end
+
+s="aaabbbbhaijjjm"
+p printer_error(s)
+
+s="aaaxbbbbyyhwawiwjjjwwm"
+p printer_error(s)
